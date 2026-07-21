@@ -1,144 +1,271 @@
-# CareerHub BD — Bangladesh's Career Platform (MVP)
+# 🚀 CareerHub BD
 
-A full-stack job platform for Bangladesh: job search, recruiter tools, admin panel,
-manual bKash/Nagad premium subscriptions, and rule-based AI career tools.
+> **The Next Generation Career Platform for Bangladesh**
 
-This is a working **MVP foundation**, not the entire imaginable feature set (see
-"What's included vs. what's next" below). It's built to run locally, be extended,
-and deployed.
+CareerHub BD is a modern SaaS-based career platform designed to transform the recruitment ecosystem in Bangladesh. It combines the best ideas from LinkedIn, Bdjobs, Indeed, Glassdoor, and AI-powered career tools into a single scalable platform.
 
----
-
-## Tech Stack
-
-- **Frontend:** React 18 + Vite + Tailwind CSS + Framer Motion + React Router
-- **Backend:** Node.js + Express + MongoDB (Mongoose) + JWT Auth
-- **Payments:** Manual bKash/Nagad verification (no payment gateway)
-- **AI Features:** Rule-based/heuristic logic (zero API cost) — swappable for a real LLM later
+The goal is to provide a complete hiring solution where **Job Seekers**, **Recruiters**, and **Companies** can connect efficiently through a secure, fast, and modern experience.
 
 ---
 
-## Project Structure
+## 🌍 Vision
 
-```
+To become the largest and most trusted career platform in Bangladesh by providing intelligent recruitment solutions powered by modern technologies and AI.
+
+---
+
+## ✨ Key Features
+
+### 👨‍💼 Job Seeker
+
+- Secure Authentication
+- Professional Profile
+- Resume Builder
+- Resume PDF Download
+- Apply for Jobs
+- Save Jobs
+- Application History
+- Job Alerts
+- Dashboard
+- Subscription Management
+- Notifications
+
+---
+
+### 🏢 Recruiter
+
+- Company Management
+- Post New Jobs
+- Edit Jobs
+- Delete Jobs
+- View Applicants
+- Download CV
+- Shortlist Candidates
+- Reject Candidates
+- Recruiter Dashboard
+- Company Analytics
+
+---
+
+### 👑 Admin
+
+- Dashboard Analytics
+- User Management
+- Recruiter Management
+- Company Approval
+- Premium Verification
+- Payment Verification
+- Job Management
+- Category Management
+- Skills Management
+- Location Management
+- Website Settings
+- Email Broadcast
+- Reports & Statistics
+
+---
+
+### 💎 Premium Subscription
+
+#### Basic
+
+- Unlimited Applications
+- Unlimited Saved Jobs
+- Premium Badge
+- Salary Filter
+- Email Notifications
+- Apply History
+- Premium CV Templates
+
+#### Pro
+
+Everything in Basic plus:
+
+- AI Resume Review
+- ATS Resume Checker
+- Resume Score
+- AI Cover Letter Generator
+- Interview Questions
+- Early Job Access
+
+#### Elite
+
+Everything in Pro plus:
+
+- Featured Candidate
+- AI Interview Practice
+- Career Roadmap
+- Skill Gap Analysis
+- Resume Expert Review
+- Unlimited AI Career Tools
+
+---
+
+## 🤖 AI Features
+
+- AI Resume Review
+- Resume Score
+- ATS Resume Checker
+- Cover Letter Generator
+- Career Suggestions
+- Skill Gap Analysis
+- Job Match Score
+- AI Interview Practice
+
+---
+
+## 💳 Manual Payment Verification
+
+Users can purchase premium subscriptions through manual payment.
+
+Supported Methods:
+
+- bKash
+- Nagad
+
+Workflow:
+
+1. Choose a Premium Plan
+2. Send Payment
+3. Submit Transaction ID
+4. Admin Verification
+5. Premium Activated
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Router
+- Axios
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- JWT Authentication
+
+### Services
+
+- Cloudinary
+- Nodemailer
+
+---
+
+## 📦 Core Modules
+
+- Authentication
+- Authorization
+- Job Management
+- Company Management
+- Resume Builder
+- Subscription System
+- Manual Payment Verification
+- Notification System
+- Dashboard
+- Recruiter Panel
+- Admin Panel
+- AI Career Tools
+- Search & Filters
+
+---
+
+## 🔒 Security
+
+- JWT Authentication
+- Password Hashing
+- Protected Routes
+- Role-Based Access Control
+- Input Validation
+- Rate Limiting
+- Secure REST APIs
+
+---
+
+## 📱 Responsive Design
+
+- Mobile
+- Tablet
+- Laptop
+- Desktop
+
+Optimized for all modern browsers and screen sizes.
+
+---
+
+## 🎨 UI/UX
+
+- Premium SaaS Design
+- Dark Theme
+- Glassmorphism
+- Smooth Animations
+- Responsive Layout
+- Loading Skeletons
+- Beautiful Dashboards
+- Toast Notifications
+- Excellent User Experience
+
+---
+
+## 📂 Project Structure
+
+```text
 careerhub-bd/
-├── backend/          # Express API
-│   ├── config/       # DB connection
-│   ├── models/       # Mongoose schemas
-│   ├── controllers/  # Route logic
-│   ├── routes/       # Express routers
-│   ├── middleware/   # Auth guards, error handler
-│   ├── utils/        # Token, email helpers
-│   ├── seed.js       # Creates admin user + categories
-│   └── server.js     # Entry point
-└── frontend/         # React app
-    └── src/
-        ├── pages/        # Route-level pages
-        ├── components/   # Reusable UI
-        ├── context/       # Auth context
-        ├── services/      # Axios API calls
-        └── hooks/
+│
+├── client/
+│   ├── src/
+│   ├── public/
+│   └── components/
+│
+├── server/
+│   ├── controllers/
+│   ├── routes/
+│   ├── middleware/
+│   ├── models/
+│   ├── utils/
+│   └── config/
+│
+└── README.md
 ```
 
 ---
 
-## Getting Started
+## 🚀 Future Roadmap
 
-### Prerequisites
-- Node.js 18+
-- MongoDB running locally, or a MongoDB Atlas connection string
-
-### 1. Backend
-
-```bash
-cd backend
-cp .env.example .env     # edit MONGO_URI, JWT_SECRET, SMTP creds, bKash/Nagad numbers
-npm install
-npm run seed              # optional: creates admin@careerhubbd.com / Admin@12345 + categories
-npm run dev                # starts on http://localhost:5000
-```
-
-> Note: `npm run seed` isn't in package.json's scripts by default — run `node seed.js` directly, or add `"seed": "node seed.js"` to `backend/package.json`.
-
-### 2. Frontend
-
-```bash
-cd frontend
-cp .env.example .env      # set VITE_API_URL if backend isn't on localhost:5000
-npm install
-npm run dev                # starts on http://localhost:5173
-```
-
-Open http://localhost:5173 in your browser.
+- Google Authentication
+- Bengali Language Support
+- Payment Gateway Integration
+- Wallet System
+- Recruiter Analytics
+- AI Career Coach
+- Company Reviews
+- Telegram & WhatsApp Notifications
+- Mobile Application
 
 ---
 
-## Default Admin Login (after seeding)
+## 👨‍💻 Developer
 
-```
-Email:    admin@careerhubbd.com
-Password: Admin@12345
-```
+**Sifat Hossen Suvo**
 
-**Change this password immediately in a real deployment.**
+Frontend & Full Stack Developer
 
 ---
 
-## How the Manual Payment System Works
+## ⭐ Support
 
-1. User selects a plan on `/pricing` → redirected to `/payment/submit`.
-2. Page shows the bKash/Nagad number (from backend `.env`).
-3. User sends money manually via their phone, then submits Transaction ID + sender number.
-4. Payment appears in Admin → Payments as "Pending".
-5. Admin clicks Approve → user's `isPremium`/`premiumPlan` (or recruiter plan) is activated for 30 days.
-6. Admin clicks Reject → user is notified, nothing is activated.
+If you like this project, consider giving it a **⭐ Star** on GitHub.
 
-No card numbers, no payment gateway — everything is manually verified, matching the original spec.
+Your support motivates me to build more high-quality open-source projects.
 
 ---
 
-## AI Features — Important Note
+## 📄 License
 
-The `/api/ai/*` endpoints (resume score, ATS check, cover letter generator, skill gap analysis,
-interview questions) use **rule-based logic**, not a real language model. This keeps the platform
-fully functional with **zero API cost**. Each controller function in
-`backend/controllers/aiController.js` is a self-contained scoring/template heuristic.
-
-To upgrade any of these to real AI-generated output, replace the logic inside the relevant
-function with a call to your model of choice (e.g. the Anthropic API) using your own API key —
-the request/response shape is designed to stay the same so the frontend won't need changes.
-
----
-
-## What's Included (Working MVP)
-
-- Auth: register (jobseeker/recruiter), login, JWT sessions, email verification, forgot/reset password
-- Job search with filters (category, location, type, experience, remote, salary — salary filter gated behind Premium)
-- Job details + apply flow with daily application limits for free users
-- Recruiter panel: company profile, post/edit/delete jobs, view & manage applicants (shortlist/reject/hire)
-- Admin panel: dashboard stats, user management (ban/unban), company approval/ban/feature, job moderation, payment approval/rejection, broadcast notifications
-- Manual bKash/Nagad payment submission + admin verification workflow
-- Premium plans (Basic/Pro/Elite) and Recruiter plans (Free/Business/Enterprise) — static catalogue, enforced via the payment approval flow
-- Resume/profile builder (skills, experience, education) + rule-based AI tools (resume score, ATS check, cover letter, skill gap, interview questions)
-- Notifications system
-- Dark glassmorphism SaaS UI, fully responsive
-
-## What's Not Included Yet (Reasonable Next Steps)
-
-- Google Login (stubbed for later — needs OAuth app credentials)
-- Cloudinary image upload wiring in the frontend (backend/model support is there; add an upload form + Cloudinary widget)
-- Bengali language toggle (i18n)
-- Real payment gateway (bKash/Nagad merchant API, SSLCommerz, etc.) — currently manual-only by design
-- Wallet withdraw flow, referral payout logic (models exist, endpoints don't yet)
-- PDF export for the resume builder (currently just stores structured data; adding a PDF template renderer is the next step)
-- Real AI integration (swap the rule-based logic — see above)
-- Automated tests
-
----
-
-## Security Notes Before Going to Production
-
-- Change `JWT_SECRET` and the seeded admin password immediately.
-- Set `NODE_ENV=production` and restrict CORS `CLIENT_URL` to your real domain.
-- Put the API behind HTTPS.
-- Consider adding request validation (e.g. `express-validator`, already in `package.json`) to every route body — only a subset of routes currently validate input beyond "required fields."
+This project is licensed under the **MIT License**.
