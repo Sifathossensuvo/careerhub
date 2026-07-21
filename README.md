@@ -1,4 +1,4 @@
-# 🚀 CareerHub BD
+# CareerHub BD
 
 > **The Next Generation Career Platform for Bangladesh**
 
