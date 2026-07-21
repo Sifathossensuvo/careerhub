@@ -2,6 +2,8 @@
 
 > **The Next Generation Career Platform for Bangladesh**
 
+Live link: https://careerhub-shuvo.onrender.com/
+
 CareerHub BD is a modern SaaS-based career platform designed to transform the recruitment ecosystem in Bangladesh. It combines the best ideas from LinkedIn, Bdjobs, Indeed, Glassdoor, and AI-powered career tools into a single scalable platform.
 
 The goal is to provide a complete hiring solution where **Job Seekers**, **Recruiters**, and **Companies** can connect efficiently through a secure, fast, and modern experience.
