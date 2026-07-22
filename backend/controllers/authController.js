@@ -31,7 +31,7 @@ export const register = async (req, res, next) => {
     });
 
     const verifyUrl = `${process.env.CLIENT_URL}/verify-email/${verificationToken}`;
-    await sendEmail({
+    sendEmail({
       to: user.email,
       subject: "Verify your CareerHub BD account",
       html: `<p>Hi ${user.name},</p><p>Please verify your email by clicking <a href="${verifyUrl}">this link</a>.</p>`,
@@ -125,7 +125,7 @@ export const forgotPassword = async (req, res, next) => {
     await user.save();
 
     const resetUrl = `${process.env.CLIENT_URL}/reset-password/${resetToken}`;
-    await sendEmail({
+    sendEmail({
       to: user.email,
       subject: "Reset your CareerHub BD password",
       html: `<p>Click <a href="${resetUrl}">here</a> to reset your password. This link expires in 30 minutes.</p>`,
